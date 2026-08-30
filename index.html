@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho Script Roblox Siêu To Khổng Lồ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 22px;
+        }
+        .script-card {
+            background: #0f172a;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 12px 0;
+            text-align: left;
+            border: 1px solid #334155;
+        }
+        .script-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 15px;
+            color: #facc15;
+        }
+        .script-box {
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 11px;
+            color: #38bdf8;
+            margin-bottom: 8px;
+            background: #090d16;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #22c55e;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-size: 13px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #16a34a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kho Script Roblox 99999+</h1>
+        <p>Danh sách các script cực khủng:</p>
+        
+        <!-- Nơi chứa danh sách script tự động sinh ra -->
+        <div id="scriptList"></div>
+    </div>
+
+    <script>
+        // DANH SÁCH SCRIPT (Bạn có thể thêm hàng nghìn cái vào đây một cách gọn gàng)
+        const scripts = [
+            { name: "Blox Fruits - Auto Farm", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/RedM9/RedHub/main/init.lua"))()' },
+            { name: "Blade Ball - Auto Parry", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Devdor/BladeBall/main/main.lua"))()' },
+            { name: "Fisch - Auto Fish", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Cosmic/Fisch/main/script.lua"))()' },
+            { name: "King Legacy - Auto Level", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ZenHub/KingLegacy/main/loader.lua"))()' },
+            { name: "Pet Simulator 99 - Auto Hatch", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/SpeedHub/PS99/main/loader.lua"))()' }
+            // Muốn thêm script nào, bạn chỉ cần copy dòng trên, phẩy một cái rồi dán tiếp vào đây!
+        ];
+
+        const listContainer = document.getElementById("scriptList");
+
+        // Vòng lặp tự động tạo giao diện cho từng script
+        scripts.forEach((item, index) => {
+            const card = document.createElement("div");
+            card.className = "script-card";
+            card.innerHTML = `
+                <h3>${item.name}</h3>
+                <div class="script-box" id="s${index}">${item.code}</div>
+                <button onclick="copyScript('s${index}')">Sao Chép Script</button>
+            `;
+            listContainer.appendChild(card);
+        });
+
+        function copyScript(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Đã sao chép script thành công!");
+            });
+        }
+    </script>
+
+</body>
+  </html>
+
